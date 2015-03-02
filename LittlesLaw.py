@@ -17,10 +17,18 @@ if selection == 1:
 	arrivalRate = int(raw_input())
 	print("What is the average time, in minutes, that a customer stays in the system?")
 	timeSpent = int(raw_input())
-	print("Your average number of customers within the system is " + str(int(arrivalRate * (timeSpent*0.0166))))
+	print("Your average number of customers within the system is " + str(int(arrivalRate * int(timeSpent*0.0166))))
 elif selection == 2:
-	print("You selected " + str(selection))
+	print("What is the average time, in minutes, that a customer stays in the system?")
+	timeSpent = int(raw_input())
+	print("What is the average number of customers in the system?")
+	avgCustomers = int(raw_input())
+	print("The average arrival rate is " + str(int(avgCustomers/(timeSpent*0.0166))) + " customers per hour.")
 elif selection == 3:
-	print("You selected " + str(selection))
+	print("What is the average number of customers in the system?")
+	avgCustomers = int(raw_input())
+	print("What is the average arrival rate per hour?")
+	arrivalRate = int(raw_input())
+	print("The average number of minutes a customer spends in the system is " + str(avgCustomers/(arrivalRate/60)))
 else:
 	print("You selected " + str(selection) + ", please select 1, 2 or 3.")
